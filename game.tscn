@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck0ecc5tc8gol"]
+
+[ext_resource type="VideoStream" path="res://assets/Opening Cutscene.ogv" id="1_8gn72"]
+[ext_resource type="Script" path="res://openingCutsceneScript.gd" id="2_ttlry"]
+
+[node name="openingCutscene" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 1154.0
+offset_bottom = 646.0
+stream = ExtResource("1_8gn72")
+autoplay = true
+expand = true
+script = ExtResource("2_ttlry")

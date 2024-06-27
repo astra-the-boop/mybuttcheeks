@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://n0lmuy0d4xeb"]
+
+[ext_resource type="Script" path="res://scenes/room.gd" id="1_07xl2"]
+[ext_resource type="Texture2D" uid="uid://dqcf64s3rgidv" path="res://assets/arrowLeft.png" id="1_e0rss"]
+[ext_resource type="Texture2D" uid="uid://cmyag1lfnao2d" path="res://assets/roomScene_full.png" id="1_g3i7d"]
+[ext_resource type="Texture2D" uid="uid://dtleg5kfcuw6d" path="res://assets/arrowRight.png" id="2_ovcs5"]
+
+[node name="room" type="Node2D"]
+script = ExtResource("1_07xl2")
+
+[node name="GUI" type="Node2D" parent="."]
+position = Vector2(410, 325)
+scale = Vector2(0.650335, 0.643)
+
+[node name="arrow left" type="Sprite2D" parent="GUI"]
+z_index = 99
+position = Vector2(-526.271, -0.481)
+scale = Vector2(0.288267, 0.257343)
+texture = ExtResource("1_e0rss")
+
+[node name="arrow right" type="Sprite2D" parent="GUI"]
+z_index = 99
+position = Vector2(555.849, -0.481)
+scale = Vector2(0.288, 0.283)
+texture = ExtResource("2_ovcs5")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(410, 325)
+scale = Vector2(0.650335, 0.643)
+texture = ExtResource("1_g3i7d")

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6xwoykjyt2r"]
+
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_4bhtm"]
+[ext_resource type="VideoStream" path="res://assets/Opening Cutscene.ogv" id="1_8gn72"]
+
+[sub_resource type="GDScript" id="GDScript_s5qay"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_4bhtm")
+
+[node name="openingCutscene" type="Node2D" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="openingCutscene"]
+offset_left = 2.0
+offset_top = -5.0
+offset_right = 865.0
+offset_bottom = 643.0
+stream = ExtResource("1_8gn72")
+autoplay = true
+expand = true
+script = SubResource("GDScript_s5qay")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 1.98
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
