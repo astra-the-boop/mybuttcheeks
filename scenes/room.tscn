@@ -1,9 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://n0lmuy0d4xeb"]
+[gd_scene load_steps=11 format=3 uid="uid://n0lmuy0d4xeb"]
 
 [ext_resource type="Script" path="res://scenes/room.gd" id="1_07xl2"]
 [ext_resource type="Texture2D" uid="uid://dqcf64s3rgidv" path="res://assets/arrowLeft.png" id="1_e0rss"]
 [ext_resource type="Texture2D" uid="uid://cmyag1lfnao2d" path="res://assets/roomScene_full.png" id="1_g3i7d"]
+[ext_resource type="Theme" uid="uid://8vj531sbdk7v" path="res://assets/buttonRight.tres" id="2_5bhv6"]
 [ext_resource type="Texture2D" uid="uid://dtleg5kfcuw6d" path="res://assets/arrowRight.png" id="2_ovcs5"]
+[ext_resource type="Theme" uid="uid://bvg6vtq5bwnl2" path="res://assets/buttonLeft.tres" id="4_r85iv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2e1kq"]
+texture = ExtResource("2_ovcs5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qovd6"]
+texture = ExtResource("1_e0rss")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cgi1r"]
+texture = ExtResource("1_e0rss")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ppu8"]
+texture = ExtResource("1_e0rss")
 
 [node name="room" type="Node2D"]
 script = ExtResource("1_07xl2")
@@ -12,17 +26,27 @@ script = ExtResource("1_07xl2")
 position = Vector2(410, 325)
 scale = Vector2(0.650335, 0.643)
 
-[node name="arrow left" type="Sprite2D" parent="GUI"]
+[node name="ButtonRight" type="Button" parent="GUI"]
 z_index = 99
-position = Vector2(-526.271, -0.481)
-scale = Vector2(0.288267, 0.257343)
-texture = ExtResource("1_e0rss")
+offset_left = 535.0
+offset_top = -75.0
+offset_right = 664.0
+offset_bottom = 100.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_5bhv6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2e1kq")
 
-[node name="arrow right" type="Sprite2D" parent="GUI"]
+[node name="ButtonLeft" type="Button" parent="GUI"]
 z_index = 99
-position = Vector2(555.849, -0.481)
-scale = Vector2(0.288, 0.283)
-texture = ExtResource("2_ovcs5")
+offset_left = -600.0
+offset_top = -75.0
+offset_right = -471.0
+offset_bottom = 100.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_r85iv")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qovd6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cgi1r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2ppu8")
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(410, 325)
