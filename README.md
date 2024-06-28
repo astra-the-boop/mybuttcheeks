@@ -1,6 +1,6 @@
 # mybuttcheeks (havent given the game a name yet lol)
 
-To play, run the file in `~/release
+To play, run the file in `~/release`
 
 ### Latest Version: **Astropath 0.0.0** (27 Jun 2024)
 
