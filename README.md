@@ -1,8 +1,8 @@
 # mybuttcheeks (havent given the game a name yet lol)
 
-To play, run the file in `~/release`
+To play, run the file in `~/release/`
 
-### Latest Version: **Astropath 0.0.0** (27 Jun 2024)
+### Latest Version: **Astropath 0.0.1** (28 Jun 2024)
 
 ### Supported on: 
 - **macOS 10.15 Catalina (Intel & Apple Silicon)** or higher *(minimum version supported by Godot 4)* via **.dmg**
