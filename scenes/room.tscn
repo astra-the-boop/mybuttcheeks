@@ -1,11 +1,72 @@
 [gd_scene load_steps=11 format=3 uid="uid://n0lmuy0d4xeb"]
 
-[ext_resource type="Script" path="res://scenes/room.gd" id="1_07xl2"]
 [ext_resource type="Texture2D" uid="uid://dqcf64s3rgidv" path="res://assets/arrowLeft.png" id="1_e0rss"]
 [ext_resource type="Texture2D" uid="uid://cmyag1lfnao2d" path="res://assets/roomScene_full.png" id="1_g3i7d"]
 [ext_resource type="Theme" uid="uid://8vj531sbdk7v" path="res://assets/buttonRight.tres" id="2_5bhv6"]
 [ext_resource type="Texture2D" uid="uid://dtleg5kfcuw6d" path="res://assets/arrowRight.png" id="2_ovcs5"]
 [ext_resource type="Theme" uid="uid://bvg6vtq5bwnl2" path="res://assets/buttonLeft.tres" id="4_r85iv"]
+
+[sub_resource type="GDScript" id="GDScript_14laa"]
+script/source = "extends Node2D
+
+
+
+var lookIndex = 0
+
+@onready var ButtonRight = $GUI/ButtonRight
+@onready var ButtonLeft = $GUI/ButtonLeft
+@onready var roomBackground = $background
+
+
+# Called when the node enters the scene tree for the first time.
+func button_right_pressed() -> void:
+	if lookIndex > 1:
+		lookIndex = 1
+	else:
+		lookIndex += 1
+
+	if lookIndex > 0:
+		ButtonRight.set_visible(false)
+		ButtonLeft.set_visible(true)
+		roomBackground.position.x = 90
+		
+	elif lookIndex < 0:
+		ButtonLeft.set_visible(false)
+		ButtonRight.set_visibile(true)
+		roomBackground.postiion.x = 775
+	else:
+		ButtonLeft.set_visible(true)
+		ButtonRight.set_visible(true)
+		roomBackground.position.x = 410
+		
+
+func button_left_pressed() -> void:
+	if lookIndex < -1:
+		lookIndex = -1
+	else:
+		lookIndex -= 1
+	if lookIndex > 0:
+		ButtonRight.set_visible(false)
+		ButtonLeft.set_visibile(true)
+		roomBackground.position.x = 90
+		
+	elif lookIndex < 0:
+		ButtonLeft.set_visible(false)
+		ButtonRight.set_visible(true)
+		roomBackground.position.x = 775
+	else:
+		ButtonLeft.set_visible(true)
+		ButtonRight.set_visible(true)
+		roomBackground.position.x = 410
+
+func _ready():
+	ButtonRight.button_down.connect(button_right_pressed)
+	ButtonLeft.button_down.connect(button_left_pressed)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2e1kq"]
 texture = ExtResource("2_ovcs5")
@@ -20,7 +81,7 @@ texture = ExtResource("1_e0rss")
 texture = ExtResource("1_e0rss")
 
 [node name="room" type="Node2D"]
-script = ExtResource("1_07xl2")
+script = SubResource("GDScript_14laa")
 
 [node name="GUI" type="Node2D" parent="."]
 position = Vector2(410, 325)

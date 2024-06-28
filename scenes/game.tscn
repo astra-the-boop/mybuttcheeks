@@ -8,9 +8,7 @@
 [node name="game" type="Node2D"]
 script = ExtResource("1_4bhtm")
 
-[node name="openingCutscene" type="Node2D" parent="."]
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="openingCutscene"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 offset_left = 2.0
 offset_top = -5.0
 offset_right = 865.0
@@ -22,7 +20,7 @@ script = SubResource("GDScript_s5qay")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 1.98
+wait_time = 2.0
 one_shot = true
 autostart = true
 
