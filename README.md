@@ -1,4 +1,5 @@
-# mybuttcheeks (havent given the game a name yet lol)
+# mybuttcheeks (havent given the game a name yet lol) (repo name courtesey of @masterwatts)
+> Made with Godot v4.2.2
 
 To play, run the file in `~/release/`
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://ck0ecc5tc8gol"]
+[gd_scene load_steps=3 format=3 uid="uid://ctunatpca06tj"]
 
 [ext_resource type="VideoStream" path="res://assets/Opening Cutscene.ogv" id="1_8gn72"]
 [ext_resource type="Script" path="res://openingCutsceneScript.gd" id="2_ttlry"]

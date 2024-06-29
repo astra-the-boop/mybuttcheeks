@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://n0lmuy0d4xeb"]
+[gd_scene load_steps=28 format=3 uid="uid://n0lmuy0d4xeb"]
 
 [ext_resource type="Texture2D" uid="uid://dqcf64s3rgidv" path="res://assets/arrowLeft.png" id="1_e0rss"]
 [ext_resource type="Texture2D" uid="uid://cmyag1lfnao2d" path="res://assets/roomScene_full.png" id="1_g3i7d"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bhlro3yajgbtr" path="res://assets/roomScene_painkillers.png" id="11_d76et"]
 [ext_resource type="Theme" uid="uid://c7w66xgrcwpg" path="res://assets/roomScene_closet.tres" id="12_ufgcs"]
 [ext_resource type="Texture2D" uid="uid://d0ccpc2qw6h4r" path="res://assets/roomScene_closet.png" id="13_r2f8x"]
+[ext_resource type="Texture2D" uid="uid://dlbx2n1fxrqvf" path="res://assets/[PLACEHOLDER] dialougeBox.jpeg" id="14_67enf"]
 
 [sub_resource type="GDScript" id="GDScript_14laa"]
 script/source = "extends Node2D
@@ -22,13 +23,17 @@ script/source = "extends Node2D
 var lookIndex = 0
 
 ## ASSIGN OBJECTS TO VARIABLES
+@onready var GUI = $GUI
+@onready var foreground = $foreground
 @onready var ButtonRight = $GUI/ButtonRight
 @onready var ButtonLeft = $GUI/ButtonLeft
 @onready var roomBackground = $background
-@onready var computer = $computer
-@onready var alarm = $alarm
-@onready var painkillers = $painkillers
-@onready var closet = $closet
+@onready var computer = $foreground/computer
+@onready var alarm = $foreground/alarm
+@onready var painkillers = $foreground/painkillers
+@onready var closet = $foreground/closet
+@onready var dialouge = $dialougeBox
+@onready var dialougeText = $dialougeBox/TextEdit
 
 
 ## GUI
@@ -95,9 +100,35 @@ func button_left_pressed() -> void:
 		closet.set_visible(false)
 
 
+## DIALOUGE DIES THE LOUGE!!!!
+func dialougeBox_open() -> void:
+	dialouge.set_visible(true)
+	GUI.set_visible(false)
+	foreground.set_visible(false)
+
+func change_dialouge_text(text):
+	dialougeText.text = text
+
+func dialougeBox_pressed() -> void:
+	dialouge.set_visible(false)
+	GUI.set_visible(true)
+	foreground.set_visible(true)
+
+## OBJECTS DO SHIT YIPEE
+func computer_selected() -> void:
+	dialougeBox_open()
+	change_dialouge_text(\"wannar fock\")
+
+func alarm_selected() -> void:
+	dialougeBox_open()
+	change_dialouge_text(\"\"\"in the stripped club. straight up 'jorking it'. and by 'it', haha, well let's justr say my peanits\"\"\")
+
 func _ready():
 	ButtonRight.button_down.connect(button_right_pressed)
 	ButtonLeft.button_down.connect(button_left_pressed)
+	computer.button_down.connect(computer_selected)
+	alarm.button_down.connect(alarm_selected)
+	dialouge.button_down.connect(dialougeBox_pressed)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -178,43 +209,77 @@ position = Vector2(410, 321)
 scale = Vector2(0.650335, 0.643)
 texture = ExtResource("1_g3i7d")
 
-[node name="computer" type="Button" parent="."]
-offset_left = 333.0
-offset_top = 222.0
-offset_right = 507.0
-offset_bottom = 333.0
+[node name="foreground" type="Node2D" parent="."]
+position = Vector2(128, 450)
+
+[node name="computer" type="Button" parent="foreground"]
+offset_left = 205.0
+offset_top = -228.0
+offset_right = 379.0
+offset_bottom = -117.0
 mouse_default_cursor_shape = 2
 theme = ExtResource("6_50vo6")
 theme_override_styles/normal = SubResource("StyleBoxTexture_s208m")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xsb12")
 
-[node name="alarm" type="Button" parent="."]
+[node name="alarm" type="Button" parent="foreground"]
 visible = false
-offset_left = -2.0
-offset_top = 477.0
-offset_right = 145.0
-offset_bottom = 639.0
+offset_left = -130.0
+offset_top = 27.0
+offset_right = 17.0
+offset_bottom = 189.0
 theme = ExtResource("8_b0c7u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_fs451")
 theme_override_styles/hover = SubResource("StyleBoxTexture_butfe")
 
-[node name="painkillers" type="Button" parent="."]
+[node name="painkillers" type="Button" parent="foreground"]
 visible = false
-offset_left = 130.0
-offset_top = 370.0
-offset_right = 405.0
-offset_bottom = 574.0
+offset_left = 2.0
+offset_top = -80.0
+offset_right = 277.0
+offset_bottom = 124.0
 theme = ExtResource("10_61ktj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ihmrj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_cmeo1")
 
-[node name="closet" type="Button" parent="."]
+[node name="closet" type="Button" parent="foreground"]
 visible = false
-offset_left = 621.0
-offset_top = 35.0
-offset_right = 865.0
-offset_bottom = 642.0
+offset_left = 493.0
+offset_top = -415.0
+offset_right = 737.0
+offset_bottom = 192.0
 mouse_default_cursor_shape = 2
 theme = ExtResource("12_ufgcs")
 theme_override_styles/normal = SubResource("StyleBoxTexture_as1xp")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tlttq")
+
+[node name="dialougeBox" type="Button" parent="."]
+visible = false
+offset_left = 62.0
+offset_top = 418.0
+offset_right = 797.0
+offset_bottom = 610.0
+mouse_default_cursor_shape = 3
+
+[node name="dialougeBox2" type="Sprite2D" parent="dialougeBox"]
+z_index = 90
+position = Vector2(369, 96)
+scale = Vector2(0.603669, 0.369608)
+texture = ExtResource("14_67enf")
+
+[node name="TextEdit" type="TextEdit" parent="dialougeBox"]
+z_index = 95
+offset_left = 66.0
+offset_top = 32.0
+offset_right = 678.0
+offset_bottom = 153.0
+placeholder_text = "FUCK YOU, NEXT!"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1
