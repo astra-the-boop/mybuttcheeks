@@ -1,10 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://n0lmuy0d4xeb"]
+[gd_scene load_steps=27 format=3 uid="uid://n0lmuy0d4xeb"]
 
 [ext_resource type="Texture2D" uid="uid://dqcf64s3rgidv" path="res://assets/arrowLeft.png" id="1_e0rss"]
 [ext_resource type="Texture2D" uid="uid://cmyag1lfnao2d" path="res://assets/roomScene_full.png" id="1_g3i7d"]
 [ext_resource type="Theme" uid="uid://8vj531sbdk7v" path="res://assets/buttonRight.tres" id="2_5bhv6"]
 [ext_resource type="Texture2D" uid="uid://dtleg5kfcuw6d" path="res://assets/arrowRight.png" id="2_ovcs5"]
 [ext_resource type="Theme" uid="uid://bvg6vtq5bwnl2" path="res://assets/buttonLeft.tres" id="4_r85iv"]
+[ext_resource type="Theme" uid="uid://dy562ijsmrr3x" path="res://assets/roomScene_computer.tres" id="6_50vo6"]
+[ext_resource type="Texture2D" uid="uid://cifq63epfvs0t" path="res://assets/roomScene_computer.png" id="7_k4g4c"]
+[ext_resource type="Theme" uid="uid://3ai3o1selsxi" path="res://assets/roomScene_alarm.tres" id="8_b0c7u"]
+[ext_resource type="Texture2D" uid="uid://bpjdgyb76chlr" path="res://assets/roomScene_clock.png" id="9_tee3i"]
+[ext_resource type="Theme" uid="uid://deiynl1rycjo" path="res://assets/roomScene_painkillers.tres" id="10_61ktj"]
+[ext_resource type="Texture2D" uid="uid://bhlro3yajgbtr" path="res://assets/roomScene_painkillers.png" id="11_d76et"]
+[ext_resource type="Theme" uid="uid://c7w66xgrcwpg" path="res://assets/roomScene_closet.tres" id="12_ufgcs"]
+[ext_resource type="Texture2D" uid="uid://d0ccpc2qw6h4r" path="res://assets/roomScene_closet.png" id="13_r2f8x"]
 
 [sub_resource type="GDScript" id="GDScript_14laa"]
 script/source = "extends Node2D
@@ -13,12 +21,17 @@ script/source = "extends Node2D
 
 var lookIndex = 0
 
+## ASSIGN OBJECTS TO VARIABLES
 @onready var ButtonRight = $GUI/ButtonRight
 @onready var ButtonLeft = $GUI/ButtonLeft
 @onready var roomBackground = $background
+@onready var computer = $computer
+@onready var alarm = $alarm
+@onready var painkillers = $painkillers
+@onready var closet = $closet
 
 
-# Called when the node enters the scene tree for the first time.
+## GUI
 func button_right_pressed() -> void:
 	if lookIndex > 1:
 		lookIndex = 1
@@ -29,15 +42,26 @@ func button_right_pressed() -> void:
 		ButtonRight.set_visible(false)
 		ButtonLeft.set_visible(true)
 		roomBackground.position.x = 90
-		
+		computer.set_visible(false)
+		alarm.set_visible(false)
+		painkillers.set_visible(false)
+		closet.set_visible(true)
 	elif lookIndex < 0:
 		ButtonLeft.set_visible(false)
 		ButtonRight.set_visibile(true)
 		roomBackground.postiion.x = 775
+		computer.set_visible(false)
+		alarm.set_visible(true)
+		painkillers.set_visibile(true)
+		closet.set_visible(false)
 	else:
 		ButtonLeft.set_visible(true)
 		ButtonRight.set_visible(true)
 		roomBackground.position.x = 410
+		computer.set_visible(true)
+		alarm.set_visible(false)
+		painkillers.set_visible(false)
+		closet.set_visible(false)
 		
 
 func button_left_pressed() -> void:
@@ -49,15 +73,27 @@ func button_left_pressed() -> void:
 		ButtonRight.set_visible(false)
 		ButtonLeft.set_visibile(true)
 		roomBackground.position.x = 90
-		
+		computer.set_visible(false)
+		alarm.set_visible(false)
+		painkillers.set_visible(false)
+		closet.set_visible(true)
 	elif lookIndex < 0:
 		ButtonLeft.set_visible(false)
 		ButtonRight.set_visible(true)
 		roomBackground.position.x = 775
+		computer.set_visible(false)
+		alarm.set_visible(true)
+		painkillers.set_visible(true)
+		closet.set_visible(false)
 	else:
 		ButtonLeft.set_visible(true)
 		ButtonRight.set_visible(true)
 		roomBackground.position.x = 410
+		computer.set_visible(true)
+		alarm.set_visible(false)
+		painkillers.set_visible(false)
+		closet.set_visible(false)
+
 
 func _ready():
 	ButtonRight.button_down.connect(button_right_pressed)
@@ -79,6 +115,34 @@ texture = ExtResource("1_e0rss")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ppu8"]
 texture = ExtResource("1_e0rss")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s208m"]
+texture = ExtResource("7_k4g4c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xsb12"]
+texture = ExtResource("7_k4g4c")
+modulate_color = Color(100, 100, 100, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fs451"]
+texture = ExtResource("9_tee3i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_butfe"]
+texture = ExtResource("9_tee3i")
+modulate_color = Color(100, 100, 100, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ihmrj"]
+texture = ExtResource("11_d76et")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmeo1"]
+texture = ExtResource("11_d76et")
+modulate_color = Color(100, 100, 100, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_as1xp"]
+texture = ExtResource("13_r2f8x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tlttq"]
+texture = ExtResource("13_r2f8x")
+modulate_color = Color(100, 100, 100, 1)
 
 [node name="room" type="Node2D"]
 script = SubResource("GDScript_14laa")
@@ -110,6 +174,47 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_cgi1r")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2ppu8")
 
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(410, 325)
+position = Vector2(410, 321)
 scale = Vector2(0.650335, 0.643)
 texture = ExtResource("1_g3i7d")
+
+[node name="computer" type="Button" parent="."]
+offset_left = 333.0
+offset_top = 222.0
+offset_right = 507.0
+offset_bottom = 333.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("6_50vo6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_s208m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xsb12")
+
+[node name="alarm" type="Button" parent="."]
+visible = false
+offset_left = -2.0
+offset_top = 477.0
+offset_right = 145.0
+offset_bottom = 639.0
+theme = ExtResource("8_b0c7u")
+theme_override_styles/normal = SubResource("StyleBoxTexture_fs451")
+theme_override_styles/hover = SubResource("StyleBoxTexture_butfe")
+
+[node name="painkillers" type="Button" parent="."]
+visible = false
+offset_left = 130.0
+offset_top = 370.0
+offset_right = 405.0
+offset_bottom = 574.0
+theme = ExtResource("10_61ktj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ihmrj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cmeo1")
+
+[node name="closet" type="Button" parent="."]
+visible = false
+offset_left = 621.0
+offset_top = 35.0
+offset_right = 865.0
+offset_bottom = 642.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("12_ufgcs")
+theme_override_styles/normal = SubResource("StyleBoxTexture_as1xp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tlttq")
