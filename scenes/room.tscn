@@ -19,8 +19,9 @@
 script/source = "extends Node2D
 
 
-
 var lookIndex = 0
+
+var takenMeds = false
 
 ## ASSIGN OBJECTS TO VARIABLES
 @onready var GUI = $GUI
@@ -117,11 +118,34 @@ func dialougeBox_pressed() -> void:
 ## OBJECTS DO SHIT YIPEE
 func computer_selected() -> void:
 	dialougeBox_open()
-	change_dialouge_text(\"wannar fock\")
+	if !takenMeds:
+		change_dialouge_text(\"wannar fock\")
+	else:
+		get_tree().change_scene_to_file(\"res://scenes/pc.tscn\")
 
 func alarm_selected() -> void:
 	dialougeBox_open()
-	change_dialouge_text(\"\"\"in the stripped club. straight up 'jorking it'. and by 'it', haha, well let's justr say my peanits\"\"\")
+	if !takenMeds:
+		change_dialouge_text(\"\"\"in the stripped club. straight up 'jorking it'. and by 'it', haha, well let's justr say my peanits\"\"\")
+	else:
+		change_dialouge_text(\"mybuttcheeks\")
+
+func painkillers_selected() -> void:
+	dialougeBox_open()
+	if !takenMeds:
+		change_dialouge_text(\"\"\"You see a mostly empty bottle of Tylenol...
+
+You grab a few and swallow them, your intense migranes now feel better.\"\"\")
+		takenMeds = true
+	else:
+		change_dialouge_text(\"greedy ahh mf, aint you alr swallowed sum?\")
+
+func closet_selected() -> void:
+	dialougeBox_open()
+	if !takenMeds:
+		change_dialouge_text(\"inhale asbestos :thumbsup:\")
+	else:
+		change_dialouge_text(\"eat bricks :thumbsup:\")
 
 func _ready():
 	ButtonRight.button_down.connect(button_right_pressed)
@@ -129,6 +153,8 @@ func _ready():
 	computer.button_down.connect(computer_selected)
 	alarm.button_down.connect(alarm_selected)
 	dialouge.button_down.connect(dialougeBox_pressed)
+	painkillers.button_down.connect(painkillers_selected)
+	closet.button_down.connect(closet_selected)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -179,6 +205,7 @@ modulate_color = Color(100, 100, 100, 1)
 script = SubResource("GDScript_14laa")
 
 [node name="GUI" type="Node2D" parent="."]
+visible = false
 position = Vector2(410, 325)
 scale = Vector2(0.650335, 0.643)
 
@@ -210,13 +237,14 @@ scale = Vector2(0.650335, 0.643)
 texture = ExtResource("1_g3i7d")
 
 [node name="foreground" type="Node2D" parent="."]
+visible = false
 position = Vector2(128, 450)
 
 [node name="computer" type="Button" parent="foreground"]
 offset_left = 205.0
-offset_top = -228.0
+offset_top = -232.0
 offset_right = 379.0
-offset_bottom = -117.0
+offset_bottom = -121.0
 mouse_default_cursor_shape = 2
 theme = ExtResource("6_50vo6")
 theme_override_styles/normal = SubResource("StyleBoxTexture_s208m")
@@ -254,7 +282,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_as1xp")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tlttq")
 
 [node name="dialougeBox" type="Button" parent="."]
-visible = false
 offset_left = 62.0
 offset_top = 418.0
 offset_right = 797.0
@@ -273,6 +300,9 @@ offset_left = 66.0
 offset_top = 32.0
 offset_right = 678.0
 offset_bottom = 153.0
+text = "You wake up in your bed feeling a sharp pain on your entire body. You can't remember a thing...
+
+[Press on the dialouge box to close it]"
 placeholder_text = "FUCK YOU, NEXT!"
 editable = false
 context_menu_enabled = false
