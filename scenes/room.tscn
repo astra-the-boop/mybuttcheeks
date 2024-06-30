@@ -133,7 +133,7 @@ func alarm_selected() -> void:
 func painkillers_selected() -> void:
 	dialougeBox_open()
 	if !takenMeds:
-		change_dialouge_text(\"\"\"You see a mostly empty bottle of Tylenol...
+		change_dialouge_text(\"\"\"You see a mostly empty bottle of painkillers...
 
 You grab a few and swallow them, your intense migranes now feel better.\"\"\")
 		takenMeds = true
@@ -296,6 +296,7 @@ texture = ExtResource("14_67enf")
 
 [node name="TextEdit" type="TextEdit" parent="dialougeBox"]
 z_index = 95
+layout_mode = 0
 offset_left = 66.0
 offset_top = 32.0
 offset_right = 678.0
