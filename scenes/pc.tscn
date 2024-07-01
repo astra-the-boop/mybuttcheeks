@@ -1,3 +1,42 @@
-[gd_scene format=3 uid="uid://5addepsuidw1"]
+[gd_scene load_steps=8 format=3 uid="uid://5addepsuidw1"]
+
+[ext_resource type="Script" path="res://scripts/pcScene.gd" id="1_0kt4o"]
+[ext_resource type="Texture2D" uid="uid://dqnhjyufp1eln" path="res://assets/pcScene.png" id="1_lkkj8"]
+[ext_resource type="Texture2D" uid="uid://do7ts5h70vw7w" path="res://assets/pcScene_blackScreen.png" id="2_3l8nv"]
+[ext_resource type="Texture2D" uid="uid://c2gyhyoisyjtw" path="res://assets/pcScene_powerButton.png" id="3_o7pw3"]
+[ext_resource type="Texture2D" uid="uid://glffvmaumdiw" path="res://assets/pcScene_monitor.png" id="5_qoeig"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22t00"]
+texture = ExtResource("3_o7pw3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eife5"]
+texture = ExtResource("3_o7pw3")
+modulate_color = Color(100, 100, 100, 1)
 
 [node name="pc" type="Node2D"]
+script = ExtResource("1_0kt4o")
+
+[node name="PcScene" type="Sprite2D" parent="."]
+position = Vector2(433, 323.5)
+scale = Vector2(0.359167, 0.359444)
+texture = ExtResource("1_lkkj8")
+
+[node name="PcScreen" type="Sprite2D" parent="."]
+position = Vector2(392, 274)
+rotation = -0.0698132
+scale = Vector2(0.196875, 0.177778)
+texture = ExtResource("2_3l8nv")
+
+[node name="PowerButton" type="Button" parent="."]
+offset_left = 742.0
+offset_top = 117.0
+offset_right = 858.0
+offset_bottom = 183.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_22t00")
+theme_override_styles/hover = SubResource("StyleBoxTexture_eife5")
+
+[node name="monitor" type="Sprite2D" parent="."]
+position = Vector2(431.69, 324.91)
+scale = Vector2(1.49154, 1.48688)
+texture = ExtResource("5_qoeig")

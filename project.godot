@@ -18,3 +18,6 @@ config/icon="res://icon.svg"
 [display]
 
 window/size/viewport_width=864
+window/size/resizable=false
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
