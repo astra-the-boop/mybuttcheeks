@@ -138,6 +138,7 @@ func painkillers_selected() -> void:
 		change_dialouge_text(\"\"\"In front of you is a mostly empty bottle of painkillers...
 
 You grab a few and swallow them, your intense migranes now feel better.\"\"\")
+		Global.roomScene_firstLoad = false
 		takenMeds = true
 	else:
 		change_dialouge_text(\"greedy ahh mf, aint you alr swallowed sum?\")
@@ -150,6 +151,17 @@ func closet_selected() -> void:
 		change_dialouge_text(\"eat bricks :thumbsup:\")
 
 func _ready():
+	## PRELOAD
+	if Global.roomScene_firstLoad == false:
+		dialouge.set_visible(false)
+		GUI.set_visible(true)
+		foreground.set_visible(true)
+		takenMeds = true
+	else:
+		pass
+		
+		
+		
 	ButtonRight.button_down.connect(button_right_pressed)
 	ButtonLeft.button_down.connect(button_left_pressed)
 	computer.button_down.connect(computer_selected)
