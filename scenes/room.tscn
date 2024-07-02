@@ -119,21 +119,23 @@ func dialougeBox_pressed() -> void:
 func computer_selected() -> void:
 	dialougeBox_open()
 	if !takenMeds:
-		change_dialouge_text(\"wannar fock\")
+		change_dialouge_text(\"The stabbing pain prevents you from getting out of your bed...\")
 	else:
 		get_tree().change_scene_to_file(\"res://scenes/pc.tscn\")
 
 func alarm_selected() -> void:
 	dialougeBox_open()
 	if !takenMeds:
-		change_dialouge_text(\"\"\"in the stripped club. straight up 'jorking it'. and by 'it', haha, well let's justr say my peanits\"\"\")
+		change_dialouge_text(\"\"\"In front of you is an alarm clock. It seems to be turned off...
+
+The stabbing pain prevents you from getting out of your bed...\"\"\")
 	else:
 		change_dialouge_text(\"mybuttcheeks\")
 
 func painkillers_selected() -> void:
 	dialougeBox_open()
 	if !takenMeds:
-		change_dialouge_text(\"\"\"You see a mostly empty bottle of painkillers...
+		change_dialouge_text(\"\"\"In front of you is a mostly empty bottle of painkillers...
 
 You grab a few and swallow them, your intense migranes now feel better.\"\"\")
 		takenMeds = true
@@ -143,7 +145,7 @@ You grab a few and swallow them, your intense migranes now feel better.\"\"\")
 func closet_selected() -> void:
 	dialougeBox_open()
 	if !takenMeds:
-		change_dialouge_text(\"inhale asbestos :thumbsup:\")
+		change_dialouge_text(\"The stabbing pain prevents you from getting out of your bed...\")
 	else:
 		change_dialouge_text(\"eat bricks :thumbsup:\")
 
