@@ -3,7 +3,7 @@
 
 To play, run the file(s) `~/release/` matching your operating system
 
-### Latest Version: **Astropath 0.1.1** (1 Jul 2024)
+### Latest Version: **Astropath 0.1.2** (2 Jul 2024)
 > Check Wiki on Github for Changelogs
 
 ### Supported on: 
