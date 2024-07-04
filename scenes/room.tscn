@@ -130,7 +130,7 @@ func alarm_selected() -> void:
 
 The stabbing pain prevents you from getting out of your bed...\"\"\")
 	else:
-		change_dialouge_text(\"mybuttcheeks\")
+		get_tree().change_scene_to_file(\"res://scenes/alarm.tscn\")
 
 func painkillers_selected() -> void:
 	dialougeBox_open()
@@ -148,7 +148,9 @@ func closet_selected() -> void:
 	if !takenMeds:
 		change_dialouge_text(\"The stabbing pain prevents you from getting out of your bed...\")
 	else:
-		change_dialouge_text(\"eat bricks :thumbsup:\")
+		get_tree().change_scene_to_file(\"res://scenes/closet.tscn\")
+
+
 
 func _ready():
 	## PRELOAD
@@ -161,7 +163,7 @@ func _ready():
 		pass
 		
 		
-		
+	
 	ButtonRight.button_down.connect(button_right_pressed)
 	ButtonLeft.button_down.connect(button_left_pressed)
 	computer.button_down.connect(computer_selected)
@@ -246,8 +248,8 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_cgi1r")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2ppu8")
 
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(410, 321)
-scale = Vector2(0.650335, 0.643)
+position = Vector2(410, 323.75)
+scale = Vector2(0.650335, 0.6485)
 texture = ExtResource("1_g3i7d")
 
 [node name="foreground" type="Node2D" parent="."]

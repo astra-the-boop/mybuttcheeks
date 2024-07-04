@@ -3,6 +3,7 @@ extends Node2D
 @onready var PcScreen = $PcScreen
 @onready var PowerButton = $PowerButton
 @onready var back = $GUI/returnToBed
+@onready var PcScreen_link = $PcScreen_link
 
 
 ## GUI
@@ -15,6 +16,12 @@ func powerButton_press() -> void:
 	PowerButton.set_visible(false)
 	Global.pcScene_pcTurnedOn = true
 
+
+func Screen_pressed() -> void:
+	if !Global.pcScene_pcTurnedOn:
+		pass
+	else:
+		get_tree().change_scene_to_file("res://scenes/pc_desktop.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,6 +36,7 @@ func _ready():
 	## ----
 	PowerButton.button_down.connect(powerButton_press)
 	back.button_down.connect(backButton_pressed)
+	PcScreen_link.button_down.connect(Screen_pressed)
 	
 	
 	
