@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4kweud6am7d6"]
+
+[ext_resource type="Script" path="res://scenes/pc_login.gd" id="1_2kqxi"]
+[ext_resource type="Texture2D" uid="uid://tdc66ypg3vqa" path="res://assets/Game assets login scene.png" id="1_32s1x"]
+
+[node name="pcLogin" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2kqxi")
+
+[node name="GameAssetsLoginScene" type="Sprite2D" parent="."]
+position = Vector2(431.5, 324)
+scale = Vector2(0.359583, 0.36)
+texture = ExtResource("1_32s1x")
+
+[node name="Username" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 539.0
+offset_top = 294.0
+offset_right = 777.0
+offset_bottom = 353.0
+placeholder_text = "Username..."
+
+[node name="loginButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 565.0
+offset_top = 386.0
+offset_right = 764.0
+offset_bottom = 421.0
+mouse_default_cursor_shape = 2
+text = "Login"
