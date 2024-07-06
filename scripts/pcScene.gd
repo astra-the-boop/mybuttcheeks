@@ -14,12 +14,13 @@ func backButton_pressed() -> void:
 func powerButton_press() -> void:
 	PcScreen.set_texture(preload("res://assets/PcScene_placeholderOnScreen.png"))
 	PowerButton.set_visible(false)
+	PcScreen_link.set_visible(true)
 	Global.pcScene_pcTurnedOn = true
 
 
 func Screen_pressed() -> void:
-	if !Global.pcScene_pcTurnedOn:
-		pass
+	if Global.pcLoggedIn:
+		get_tree().change_scene_to_file("res://scenes/pc_desktop.tscn")
 	else:
 		get_tree().change_scene_to_file("res://scenes/pc_login.tscn")
 
@@ -27,6 +28,7 @@ func Screen_pressed() -> void:
 func _ready():
 	## PRELOAD
 	if !Global.pcScene_pcTurnedOn:
+		PcScreen_link.set_visible(false)
 		PcScreen.set_texture(preload("res://assets/pcScene_blackScreen.png"))
 	else:
 		PcScreen.set_texture(preload("res://assets/PcScene_placeholderOnScreen.png"))

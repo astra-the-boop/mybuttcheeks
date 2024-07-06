@@ -6,6 +6,7 @@ extends Control
 func loginButton_pressed() -> void:
 	Global.PlayerName = username.text
 	get_tree().change_scene_to_file("res://scenes/pc_desktop.tscn")
+	Global.pcLoggedIn = true
 
 func _ready():
 	username.grab_focus()

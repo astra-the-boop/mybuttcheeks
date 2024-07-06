@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bin0r7xqlblo5"]
+[gd_scene load_steps=3 format=3 uid="uid://bin0r7xqlblo5"]
 
 [ext_resource type="Texture2D" uid="uid://p6rmddtgk6km" path="res://assets/pcDesktopScene_desktop.png" id="1_2vacl"]
+[ext_resource type="Script" path="res://scripts/pc_desktop.gd" id="1_cmkba"]
 
 [node name="PcDesktop" type="Node2D"]
+script = ExtResource("1_cmkba")
 
 [node name="PcDesktopSceneDesktop" type="Sprite2D" parent="."]
 position = Vector2(432, 324)
