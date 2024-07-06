@@ -1,6 +1,6 @@
-# hey look i remembered to edit the readme file this time!
+# time to actually think about the storyline.....
 > Made with Godot v4.2.2
-### Latest Version: **Astropath 0.2.1** (5 Jul 2024)
+### Latest Version: **Astropath 0.2.2** (7 Jul 2024)
 
 ## Instructions:
 ### Recommended:
