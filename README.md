@@ -1,6 +1,9 @@
-# time to actually think about the storyline.....
+## Heyyyy!!
+So progress with the game's been pretty good lately, but from now until maybe the end of the prologue or start of the first arc, things might be a bit slow since I'll have to start working on the storyline and all! Thanks for the support <3
+- astra.zenkaa (main dev)
+
 > Made with Godot v4.2.2
-### Latest Version: **Astropath 0.2.2** (7 Jul 2024)
+### Latest Version: **Astropath 0.2.3** (12 Jul 2024)
 
 ## Instructions:
 ### Recommended:
