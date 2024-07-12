@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8lxbq7g4mgjw"]
+
+[ext_resource type="Texture2D" uid="uid://c3agd1x7itb4p" path="res://assets/FilesScene.png" id="1_bwdri"]
+[ext_resource type="Script" path="res://scripts/pc_files_app.gd" id="1_s6u3f"]
+
+[node name="pc_files_app" type="Node2D"]
+script = ExtResource("1_s6u3f")
+
+[node name="FilesScene" type="Sprite2D" parent="."]
+position = Vector2(433, 322.5)
+scale = Vector2(0.36, 0.359444)
+texture = ExtResource("1_bwdri")
+
+[node name="closeButton" type="Button" parent="."]
+offset_left = 818.0
+offset_top = -4.0
+offset_right = 867.0
+offset_bottom = 31.0

@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbc532t031eo8"]
+
+[ext_resource type="Texture2D" uid="uid://n234sirv112a" path="res://assets/MailScene.png" id="1_0tmpw"]
+[ext_resource type="Script" path="res://scenes/pc_mail_app.gd" id="1_tpbx1"]
+
+[node name="pcMailApp" type="Node2D"]
+script = ExtResource("1_tpbx1")
+
+[node name="From" type="TextEdit" parent="."]
+z_index = 12
+offset_left = 282.0
+offset_top = 167.0
+offset_right = 735.0
+offset_bottom = 202.0
+text = "cuntfucker"
+placeholder_text = "Sender"
+
+[node name="To" type="TextEdit" parent="."]
+z_index = 12
+offset_left = 282.0
+offset_top = 208.84
+offset_right = 735.0
+offset_bottom = 243.84
+text = "slut
+"
+placeholder_text = "Sender"
+
+[node name="MailScene" type="Sprite2D" parent="."]
+position = Vector2(432, 323.5)
+scale = Vector2(0.36, 0.359444)
+texture = ExtResource("1_0tmpw")
+
+[node name="closeButton" type="Button" parent="."]
+offset_left = 807.0
+offset_top = -3.0
+offset_right = 867.0
+offset_bottom = 35.0
+
+[node name="mail" type="TextEdit" parent="."]
+offset_left = 226.0
+offset_top = 270.0
+offset_right = 843.0
+offset_bottom = 669.0
+placeholder_text = "owo"

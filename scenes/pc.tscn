@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://5addepsuidw1"]
+[gd_scene load_steps=11 format=3 uid="uid://5addepsuidw1"]
 
 [ext_resource type="Script" path="res://scripts/pcScene.gd" id="1_0kt4o"]
 [ext_resource type="Texture2D" uid="uid://dqnhjyufp1eln" path="res://assets/pcScene.png" id="1_lkkj8"]
@@ -15,6 +15,9 @@ texture = ExtResource("3_o7pw3")
 modulate_color = Color(100, 100, 100, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s3jrj"]
+texture = ExtResource("6_7kjl2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5an4t"]
 texture = ExtResource("6_7kjl2")
 
 [node name="pc" type="Node2D"]
@@ -64,7 +67,9 @@ offset_left = 13.0
 offset_top = 15.0
 offset_right = 105.0
 offset_bottom = 113.0
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_s3jrj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5an4t")
 text = "Return
 to
 bed"

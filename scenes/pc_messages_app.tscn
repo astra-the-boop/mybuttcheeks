@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1nt76cnvpoav"]
+
+[ext_resource type="Texture2D" uid="uid://bwhlc1gplvnji" path="res://assets/MessagesScene_Login.png" id="1_f3vos"]
+[ext_resource type="Script" path="res://scripts/pc_messages_app.gd" id="1_h6xeo"]
+
+[node name="pc_messages_app" type="Node2D"]
+script = ExtResource("1_h6xeo")
+
+[node name="MessagesSceneLogin" type="Sprite2D" parent="."]
+position = Vector2(432, 324)
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("1_f3vos")
+
+[node name="closeButton" type="Button" parent="."]
+offset_left = 809.0
+offset_top = -9.0
+offset_right = 869.0
+offset_bottom = 37.0
