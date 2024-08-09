@@ -12,7 +12,7 @@ offset_left = 282.0
 offset_top = 167.0
 offset_right = 735.0
 offset_bottom = 202.0
-text = "cuntfucker"
+text = "noreply@nonazon.com"
 placeholder_text = "Sender"
 
 [node name="To" type="TextEdit" parent="."]
@@ -21,8 +21,7 @@ offset_left = 282.0
 offset_top = 208.84
 offset_right = 735.0
 offset_bottom = 243.84
-text = "slut
-"
+text = "catlover701@fmail.com"
 placeholder_text = "Sender"
 
 [node name="MailScene" type="Sprite2D" parent="."]
@@ -36,9 +35,32 @@ offset_top = -3.0
 offset_right = 867.0
 offset_bottom = 35.0
 
+[node name="email preview" type="TextEdit" parent="."]
+offset_left = 4.0
+offset_top = 165.0
+offset_right = 202.0
+offset_bottom = 289.0
+text = "Happy Birthday, catl...
+noreply@nonazon.com
+
+7 Jan 2022"
+placeholder_text = "owo"
+wrap_mode = 1
+
 [node name="mail" type="TextEdit" parent="."]
 offset_left = 226.0
 offset_top = 270.0
 offset_right = 843.0
 offset_bottom = 669.0
+text = "Happy birthday, catlover701!
+
+To celebrate this occasion, we here at Nonazon present you a small gift for your next purchase.
+
+Code: [BIRTHDAY71JAhdD3] for 25% off your next purchase(*).
+Expiration: 14 Aug 2022
+
+Thank you so much for choosing Nonazon!
+
+(*: Terms and Conditions apply)"
 placeholder_text = "owo"
+wrap_mode = 1

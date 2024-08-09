@@ -13,6 +13,7 @@ config_version=5
 config/name="https://github.com/astra-the-boop/mybuttcheeks"
 run/main_scene="res://scenes/openingCutscene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0.254064, 0.0517108, 0.137361, 1)
 config/icon="res://icon.svg"
 
 [autoload]

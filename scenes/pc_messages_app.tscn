@@ -16,3 +16,9 @@ offset_left = 809.0
 offset_top = -9.0
 offset_right = 869.0
 offset_bottom = 37.0
+
+[node name="fogotPassword" type="Button" parent="."]
+offset_left = 469.0
+offset_top = 339.0
+offset_right = 598.0
+offset_bottom = 359.0

@@ -4,11 +4,16 @@ extends Node2D
 @onready var PowerButton = $PowerButton
 @onready var back = $GUI/returnToBed
 @onready var PcScreen_link = $PcScreen_link
+@onready var checkDrawers = $GUI/checkDrawers
 
 
 ## GUI
 func backButton_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/room.tscn")
+
+func checkDrawers_buttonPressed() -> void:
+	print("go kys")
+
 
 
 func powerButton_press() -> void:
@@ -34,12 +39,15 @@ func _ready():
 		PcScreen.set_texture(preload("res://assets/PcScene_placeholderOnScreen.png"))
 		PowerButton.set_visible(false)
 	
+	if Global.phoneDiscovered:
+		checkDrawers.set_visible(true)
+	
 	
 	## ----
 	PowerButton.button_down.connect(powerButton_press)
 	back.button_down.connect(backButton_pressed)
 	PcScreen_link.button_down.connect(Screen_pressed)
-	
+	checkDrawers.button_down.connect(checkDrawers_buttonPressed)
 	
 	
 
