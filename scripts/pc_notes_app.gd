@@ -8,6 +8,7 @@ func closeApp() -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.save()
 	closeButton.button_down.connect(closeApp)
 
 

@@ -147,12 +147,15 @@ func closet_selected() -> void:
 	dialougeBox_open()
 	if !takenMeds:
 		change_dialouge_text(\"The stabbing pain prevents you from getting out of your bed...\")
-	else:
+	elif takenMeds && !Global.closetUnlocked:
 		get_tree().change_scene_to_file(\"res://scenes/closet.tscn\")
+	else:
+		get_tree().change_scene_to_file(\"res://scenes/closet_unlocked.tscn\")
 
 
 
 func _ready():
+	Global.save()
 	## PRELOAD
 	if Global.roomScene_firstLoad == false:
 		dialouge.set_visible(false)

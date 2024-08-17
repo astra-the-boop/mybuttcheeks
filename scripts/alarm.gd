@@ -26,6 +26,7 @@ func backButton_pressed() -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.save()
 	back.button_down.connect(backButton_pressed)
 	alarmButton.button_down.connect(alarmButton_pressed)
 	dialouge.button_down.connect(dialougeBox_pressed)

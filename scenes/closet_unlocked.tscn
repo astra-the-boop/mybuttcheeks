@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgddprt3pcpeb"]
+
+[ext_resource type="Script" path="res://scenes/closet_unlocked.gd" id="1_crypn"]
+[ext_resource type="Texture2D" uid="uid://6e6a788fxufa" path="res://assets/Opened Closet.jpeg" id="1_oekuk"]
+[ext_resource type="Texture2D" uid="uid://dqcf64s3rgidv" path="res://assets/arrowLeft.png" id="2_c6b4y"]
+[ext_resource type="Texture2D" uid="uid://dlbx2n1fxrqvf" path="res://assets/[PLACEHOLDER] dialougeBox.jpeg" id="4_0vxqb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2seje"]
+texture = ExtResource("2_c6b4y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6muu7"]
+texture = ExtResource("2_c6b4y")
+
+[node name="closet_unlocked" type="Node2D"]
+script = ExtResource("1_crypn")
+
+[node name="OpenedCloset" type="Sprite2D" parent="."]
+position = Vector2(432.5, 325.25)
+scale = Vector2(0.607018, 0.61237)
+texture = ExtResource("1_oekuk")
+
+[node name="back" type="Button" parent="."]
+offset_left = 13.0
+offset_top = 15.0
+offset_right = 105.0
+offset_bottom = 113.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_2seje")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6muu7")
+text = "BACK TO
+ BED 
+FUCKER"
+metadata/_edit_use_anchors_ = true
+
+[node name="batteries" type="Button" parent="."]
+offset_left = 320.0
+offset_top = 406.0
+offset_right = 398.0
+offset_bottom = 440.0
+text = "batteries"
+
+[node name="dialougeBox" type="Button" parent="."]
+visible = false
+z_index = 50
+offset_left = 62.0
+offset_top = 418.0
+offset_right = 797.0
+offset_bottom = 610.0
+mouse_default_cursor_shape = 3
+
+[node name="dialougeBox2" type="Sprite2D" parent="dialougeBox"]
+z_index = 90
+position = Vector2(369, 96)
+scale = Vector2(0.603669, 0.369608)
+texture = ExtResource("4_0vxqb")
+
+[node name="TextEdit" type="TextEdit" parent="dialougeBox"]
+z_index = 95
+layout_mode = 0
+offset_left = 66.0
+offset_top = 32.0
+offset_right = 678.0
+offset_bottom = 153.0
+text = "Unlike most items in here, the batteries seem to be left out in the open. You decide to take some with you"
+placeholder_text = "FUCK YOU, NEXT!"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1

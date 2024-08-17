@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://qh1h8vnc4fal"]
+
+[ext_resource type="Texture2D" uid="uid://oda0oy21csp" path="res://assets/drawer.png" id="1_e8ldw"]
+[ext_resource type="Script" path="res://scenes/drawer.gd" id="1_ug2oe"]
+[ext_resource type="Texture2D" uid="uid://dqcf64s3rgidv" path="res://assets/arrowLeft.png" id="3_oqtg7"]
+[ext_resource type="Texture2D" uid="uid://dlbx2n1fxrqvf" path="res://assets/[PLACEHOLDER] dialougeBox.jpeg" id="4_ngp1f"]
+[ext_resource type="Texture2D" uid="uid://cs52xr0wvyw6u" path="res://assets/phoneFront_temp.png" id="5_3qimn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d80dy"]
+texture = ExtResource("3_oqtg7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_64t6c"]
+texture = ExtResource("3_oqtg7")
+
+[node name="drawer" type="Node2D"]
+script = ExtResource("1_ug2oe")
+
+[node name="Drawer" type="Sprite2D" parent="."]
+position = Vector2(492.5, 331)
+scale = Vector2(1.27474, 1.49302)
+texture = ExtResource("1_e8ldw")
+
+[node name="phone" type="Button" parent="."]
+offset_left = 386.0
+offset_top = 193.0
+offset_right = 554.0
+offset_bottom = 416.0
+
+[node name="back" type="Button" parent="."]
+offset_left = 13.0
+offset_top = 15.0
+offset_right = 105.0
+offset_bottom = 113.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_d80dy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_64t6c")
+text = "BA(llsa)CK"
+metadata/_edit_use_anchors_ = true
+
+[node name="phoneInspect" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(463.25, 245.188)
+scale = Vector2(1.80102, 1.69734)
+texture = ExtResource("5_3qimn")
+
+[node name="Button" type="Button" parent="phoneInspect"]
+offset_left = 59.8365
+offset_top = -25.7946
+offset_right = 139.837
+offset_bottom = 4.20539
+text = "Flip over"
+
+[node name="dialougeBox" type="Button" parent="."]
+visible = false
+z_index = 50
+offset_left = 62.0
+offset_top = 418.0
+offset_right = 797.0
+offset_bottom = 610.0
+mouse_default_cursor_shape = 3
+
+[node name="dialougeBox2" type="Sprite2D" parent="dialougeBox"]
+z_index = 90
+position = Vector2(369, 96)
+scale = Vector2(0.603669, 0.369608)
+texture = ExtResource("4_ngp1f")
+
+[node name="TextEdit" type="TextEdit" parent="dialougeBox"]
+z_index = 95
+layout_mode = 0
+offset_left = 66.0
+offset_top = 32.0
+offset_right = 678.0
+offset_bottom = 153.0
+text = "You find a familiar looking, rather outdated, smartphone..."
+placeholder_text = "FUCK YOU, NEXT!"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1

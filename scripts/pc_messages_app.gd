@@ -11,6 +11,7 @@ func forgotPassword_pressed() -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.save()
 	closeButton.button_down.connect(closeButton_pressed)
 	forgotPassword.button_down.connect(forgotPassword_pressed)
 

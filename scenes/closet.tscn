@@ -62,7 +62,7 @@ offset_left = 66.0
 offset_top = 32.0
 offset_right = 678.0
 offset_bottom = 153.0
-text = "The closet seems to be locked with a number padlock..."
+text = "The closet seems to be locked with a 6-digit number padlock..."
 placeholder_text = "FUCK YOU, NEXT!"
 editable = false
 context_menu_enabled = false
@@ -73,3 +73,23 @@ drag_and_drop_selection_enabled = false
 virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
 wrap_mode = 1
+
+[node name="passcodeEnter" type="LineEdit" parent="."]
+visible = false
+offset_left = 338.0
+offset_top = 418.0
+offset_right = 569.0
+offset_bottom = 533.0
+theme_override_font_sizes/font_size = 56
+placeholder_text = "blehxd"
+alignment = 1
+max_length = 6
+virtual_keyboard_type = 2
+
+[node name="open" type="Button" parent="passcodeEnter"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 130.0
+offset_right = 237.0
+offset_bottom = 170.0
+text = "Attempt to open"

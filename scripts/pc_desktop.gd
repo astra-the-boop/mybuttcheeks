@@ -22,11 +22,13 @@ func windowsButton_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/pc.tscn")
 
 func _ready():
+	Global.save()
 	windows.button_down.connect(windowsButton_pressed)
 	notes.button_down.connect(notes_selected)
 	mail.button_down.connect(mail_selected)
 	messages.button_down.connect(messages_selected)
 	files.button_down.connect(files_selected)
+	print(Global.PlayerName)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

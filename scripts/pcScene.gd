@@ -12,7 +12,7 @@ func backButton_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/room.tscn")
 
 func checkDrawers_buttonPressed() -> void:
-	print("go kys")
+	get_tree().change_scene_to_file("res://scenes/drawer.tscn")
 
 
 
@@ -31,6 +31,7 @@ func Screen_pressed() -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.save()
 	## PRELOAD
 	if !Global.pcScene_pcTurnedOn:
 		PcScreen_link.set_visible(false)

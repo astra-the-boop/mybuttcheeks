@@ -9,5 +9,6 @@ func loginButton_pressed() -> void:
 	Global.pcLoggedIn = true
 
 func _ready():
+	Global.save()
 	username.grab_focus()
 	loginButton.button_down.connect(loginButton_pressed)

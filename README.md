@@ -1,9 +1,9 @@
-## OMG AN UPDATE?!?!
-hi folkss so how many weeks has it been since my last commit? like 4? so what have i done, uhhh not much, but hey, the prologue (act 0) is almost done now! just need to finish some things up and add a save file system!! <3 see yall soon, ill try to update this consistently despite school!
+## HUH WHAT A SAVE FILE SYSTEM?!?!
+hallo peeps, so school's back, and also i'm working on some other stuff (applying for other schools, working on my igcse essays, etc..), so it may be a bit slow but im still working on this project! the thing that's taking the most time rn is prolly the story? i'm having my friends help me on that, thanks y'all!! especially my friends who have decieded to help me on this thing :3c
 - astra.celestine (main dev)
 
 > Made with Godot v4.2.2
-### Latest Version: **Astropath 0.3.0** (10 Aug 2024)
+### Latest Version: **Astropath 1.0.0** (18 Aug 2024)
 
 ## Instructions:
 ### Recommended:

@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfs8jah781142"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_48que"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_48que")
+
+[node name="play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 348.0
+offset_right = 280.0
+offset_bottom = 396.0
+text = "PLAY"
+
+[node name="options" type="Button" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 405.0
+offset_right = 281.0
+offset_bottom = 453.0
+text = "OPTIONS (tba)"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 520.0
+offset_right = 285.0
+offset_bottom = 568.0
+text = "QUIT GAME"
+
+[node name="credits" type="Button" parent="."]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 462.0
+offset_right = 283.0
+offset_bottom = 509.0
+text = "CREDITS"

@@ -32,6 +32,7 @@ func dialougeBox_pressed() -> void:
 
 
 func _ready():
+	Global.save()
 	back.button_down.connect(back_buttonPressed)
 	sendCode.button_down.connect(sendCode_buttonPressed)
 	dialouge.button_down.connect(dialougeBox_pressed)
