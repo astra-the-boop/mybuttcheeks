@@ -45,6 +45,7 @@ noreply@nonazon.com
 
 7 Jan 2022"
 placeholder_text = "owo"
+editable = false
 wrap_mode = 1
 
 [node name="mail" type="TextEdit" parent="."]
@@ -63,4 +64,5 @@ Thank you so much for choosing Nonazon!
 
 (*: Terms and Conditions apply)"
 placeholder_text = "owo"
+editable = false
 wrap_mode = 1
