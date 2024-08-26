@@ -1,9 +1,9 @@
-## HUH WHAT A SAVE FILE SYSTEM?!?!
-hallo peeps, so school's back, and also i'm working on some other stuff (applying for other schools, working on my igcse essays, etc..), so it may be a bit slow but im still working on this project! the thing that's taking the most time rn is prolly the story? i'm having my friends help me on that, thanks y'all!! especially my friends who have decieded to help me on this thing :3c
-- astra.celestine (main dev)
+## me when the when the
+hey yall!! uh so ill be pushing some of the art and writing to my friends (paid), since, uh im having troubles working on the game (especially the story and art) by myself!!
+-astra.celestine
 
 > Made with Godot v4.2.2
-### Latest Version: **Astropath 1.0.0** (18 Aug 2024)
+### Latest Version: **Astropath 1.0.1** (26 Aug 2024)
 
 ## Instructions:
 ### Recommended:
@@ -37,6 +37,4 @@ hallo peeps, so school's back, and also i'm working on some other stuff (applyin
 
 
 
-## Credits
-- Main developer, storywriter, and artist: @astra-the-boop (GitHub)
-- Testers: @masterwatts (GitHub), @splendoroftranquilwaters (Insta)
+## [Credits](https://github.com/astra-the-boop/mybuttcheeks/wiki/Credits)
