@@ -13,13 +13,20 @@ func change_dialouge_text(text):
 	dialougeText.text = text
 
 func dialougeBox_pressed() -> void:
-	dialouge.set_visible(false)
+	if !Global.batteriesObtained:
+		dialouge.set_visible(false)
+	else:
+		get_tree().change_scene_to_file("res://scenes/cutscenes.tscn")
+		
+	
 
 func alarmButton_pressed() -> void:
-	change_dialouge_text("""The alarm doesn't seem to turn on...
-
-You turn the alarm clock over... (not yet :3 i havent coded it in)""")
 	dialougeBox_open()
+	if !Global.batteriesObtained:
+		change_dialouge_text("""The alarm doesn't seem to turn on...""")
+	else:
+		change_dialouge_text("You insert the batteries into the alarm and the display seems to light up.")
+		
 
 func backButton_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/room.tscn")

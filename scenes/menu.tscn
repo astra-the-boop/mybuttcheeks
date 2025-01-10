@@ -14,8 +14,8 @@ offset_left = -857.0
 offset_top = 567.0
 offset_right = -455.0
 offset_bottom = 643.0
-theme_override_constants/line_spacing = -1
 theme_override_constants/outline_size = -6
+theme_override_constants/line_spacing = -1
 text = "Version Astp-1.0.1
 https://github.com/astra-the-boop/mybuttcheeks
 Godot Engine v4.2.2"
@@ -35,7 +35,7 @@ offset_left = 112.0
 offset_top = 405.0
 offset_right = 281.0
 offset_bottom = 453.0
-text = "OPTIONS (tba)"
+text = "OPTIONS"
 
 [node name="quit" type="Button" parent="."]
 layout_mode = 0

@@ -1,9 +1,9 @@
-## me when the when the
-hey yall!! uh so ill be pushing some of the art and writing to my friends (paid), since, uh im having troubles working on the game (especially the story and art) by myself!!
+## WUAOHH IM BACKKKK
+yoooo okay, so sorry for the long wait xd, but IM BACK after a few months, HAPPY NEW YEARS!! i just had an idea breakthrough and just HAD to implement it, so might as well add a buncha shit
 -astra.celestine
 
 > Made with Godot v4.2.2
-### Latest Version: **Astropath 1.0.1** (26 Aug 2024)
+### Latest Version: **Astropath 2.0.0** (10 Jan 2025)
 
 ## Instructions:
 ### Recommended:
@@ -32,6 +32,7 @@ hey yall!! uh so ill be pushing some of the art and writing to my friends (paid)
 ### Tested on: 
 - **macOS Monterey 12.7.1 (Intel)** - *[MacBook Air 2017 13" 256GB/8GB DDR3]*
 - **macOS Ventura 13.6.7 (Apple Silicon)** - *[MacBook Pro M1 2021 14" 512GB/16GB]*
+- **macOS Sequoia 15.0 (Apple Silicon)** - *[MacBook Air M3 2024 13" 512GB/16GB]*
 - **Windows 10 Home 22H2 x64** - *[MacBook Air 2017 13" 256GB/8GB DDR3 RAM via Bootcamp]*
 - **Windows 11 Home 23H2 x64** - *[Acer Aspire 7 15.6" 512GB/16GB DDR4 RAM R5-5625U CPU RTX 3050 GPU]*
 

@@ -155,6 +155,7 @@ func closet_selected() -> void:
 
 
 func _ready():
+	Global.arc = 0
 	Global.save()
 	## PRELOAD
 	if Global.roomScene_firstLoad == false:
@@ -183,42 +184,42 @@ func _process(delta):
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2e1kq"]
 texture = ExtResource("2_ovcs5")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qovd6"]
-texture = ExtResource("1_e0rss")
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cgi1r"]
 texture = ExtResource("1_e0rss")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ppu8"]
 texture = ExtResource("1_e0rss")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s208m"]
-texture = ExtResource("7_k4g4c")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qovd6"]
+texture = ExtResource("1_e0rss")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xsb12"]
 texture = ExtResource("7_k4g4c")
 modulate_color = Color(100, 100, 100, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fs451"]
-texture = ExtResource("9_tee3i")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s208m"]
+texture = ExtResource("7_k4g4c")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_butfe"]
 texture = ExtResource("9_tee3i")
 modulate_color = Color(100, 100, 100, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ihmrj"]
-texture = ExtResource("11_d76et")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fs451"]
+texture = ExtResource("9_tee3i")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmeo1"]
 texture = ExtResource("11_d76et")
 modulate_color = Color(100, 100, 100, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_as1xp"]
-texture = ExtResource("13_r2f8x")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ihmrj"]
+texture = ExtResource("11_d76et")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tlttq"]
 texture = ExtResource("13_r2f8x")
 modulate_color = Color(100, 100, 100, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_as1xp"]
+texture = ExtResource("13_r2f8x")
 
 [node name="room" type="Node2D"]
 script = SubResource("GDScript_14laa")
@@ -246,9 +247,9 @@ offset_right = -471.0
 offset_bottom = 100.0
 mouse_default_cursor_shape = 2
 theme = ExtResource("4_r85iv")
-theme_override_styles/normal = SubResource("StyleBoxTexture_qovd6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_cgi1r")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2ppu8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qovd6")
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(410, 323.75)
@@ -266,8 +267,8 @@ offset_right = 379.0
 offset_bottom = -121.0
 mouse_default_cursor_shape = 2
 theme = ExtResource("6_50vo6")
-theme_override_styles/normal = SubResource("StyleBoxTexture_s208m")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xsb12")
+theme_override_styles/normal = SubResource("StyleBoxTexture_s208m")
 
 [node name="alarm" type="Button" parent="foreground"]
 visible = false
@@ -277,8 +278,8 @@ offset_right = 17.0
 offset_bottom = 189.0
 mouse_default_cursor_shape = 2
 theme = ExtResource("8_b0c7u")
-theme_override_styles/normal = SubResource("StyleBoxTexture_fs451")
 theme_override_styles/hover = SubResource("StyleBoxTexture_butfe")
+theme_override_styles/normal = SubResource("StyleBoxTexture_fs451")
 
 [node name="painkillers" type="Button" parent="foreground"]
 visible = false
@@ -288,8 +289,8 @@ offset_right = 277.0
 offset_bottom = 124.0
 mouse_default_cursor_shape = 2
 theme = ExtResource("10_61ktj")
-theme_override_styles/normal = SubResource("StyleBoxTexture_ihmrj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_cmeo1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ihmrj")
 
 [node name="closet" type="Button" parent="foreground"]
 visible = false
@@ -299,8 +300,8 @@ offset_right = 737.0
 offset_bottom = 192.0
 mouse_default_cursor_shape = 2
 theme = ExtResource("12_ufgcs")
-theme_override_styles/normal = SubResource("StyleBoxTexture_as1xp")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tlttq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_as1xp")
 
 [node name="dialougeBox" type="Button" parent="."]
 z_index = 50

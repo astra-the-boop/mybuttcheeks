@@ -7,8 +7,14 @@ extends Control
 
 func play_pressed() -> void:
 	Global.load_data()
-	get_tree().change_scene_to_file("res://scenes/room.tscn")
+	if !Global.arc == -1:
+		get_tree().change_scene_to_file("res://scenes/room.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/cutscenes.tscn")
 	#in future, set change_scene_to_file based on locaiton based on time/story
+
+func options_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/settings.tscn")
 
 func credits_pressed() -> void:
 	OS.shell_open("https://github.com/astra-the-boop/mybuttcheeks/wiki/Credits")
@@ -23,6 +29,7 @@ func _ready():
 	play.button_down.connect(play_pressed)
 	quit.button_down.connect(quit_pressed)
 	credits.button_down.connect(credits_pressed)
+	options.button_down.connect(options_pressed)
 
 
 

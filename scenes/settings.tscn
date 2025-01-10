@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg4yhe4iido"]
+
+[ext_resource type="Script" path="res://scripts/settings.gd" id="1_kdvg5"]
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_kdvg5")
+
+[node name="savedatatitle" type="TextEdit" parent="."]
+offset_left = 35.0
+offset_top = 104.0
+offset_right = 168.0
+offset_bottom = 152.0
+rotation = -0.00561379
+theme_override_font_sizes/font_size = 25
+text = "Save data"
+editable = false
+
+[node name="saveDataStatus" type="TextEdit" parent="."]
+offset_left = 36.0
+offset_top = 166.0
+offset_right = 385.0
+offset_bottom = 213.0
+rotation = -0.00447798
+text = "Checking for save data..."
+
+[node name="backButton" type="Button" parent="."]
+offset_left = 43.0
+offset_top = 29.0
+offset_right = 196.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 25
+text = "<< Back"
+
+[node name="deleteSave" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 220.0
+offset_right = 165.0
+offset_bottom = 267.0
+disabled = true
+text = "Delete Save"

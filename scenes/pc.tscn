@@ -8,17 +8,17 @@
 [ext_resource type="Texture2D" uid="uid://dqcf64s3rgidv" path="res://assets/arrowLeft.png" id="6_7kjl2"]
 [ext_resource type="Texture2D" uid="uid://dtleg5kfcuw6d" path="res://assets/arrowRight.png" id="7_ofic8"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22t00"]
-texture = ExtResource("3_o7pw3")
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eife5"]
 texture = ExtResource("3_o7pw3")
 modulate_color = Color(100, 100, 100, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s3jrj"]
-texture = ExtResource("6_7kjl2")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22t00"]
+texture = ExtResource("3_o7pw3")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5an4t"]
+texture = ExtResource("6_7kjl2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s3jrj"]
 texture = ExtResource("6_7kjl2")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vla28"]
@@ -54,8 +54,8 @@ offset_top = 117.0
 offset_right = 858.0
 offset_bottom = 183.0
 mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_22t00")
 theme_override_styles/hover = SubResource("StyleBoxTexture_eife5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_22t00")
 
 [node name="monitor" type="Sprite2D" parent="."]
 z_index = 60
@@ -72,8 +72,8 @@ offset_top = 15.0
 offset_right = 105.0
 offset_bottom = 113.0
 mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_s3jrj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5an4t")
+theme_override_styles/normal = SubResource("StyleBoxTexture_s3jrj")
 text = "Return
 to
 bed"

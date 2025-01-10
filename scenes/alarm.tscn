@@ -5,13 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://1ytgjwc2aydn" path="res://assets/alarmScene_alarm.png" id="3_7bjdg"]
 [ext_resource type="Texture2D" uid="uid://dlbx2n1fxrqvf" path="res://assets/[PLACEHOLDER] dialougeBox.jpeg" id="4_ofk11"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ht4o"]
-texture = ExtResource("2_o5cgb")
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ata0n"]
 texture = ExtResource("2_o5cgb")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7dx85"]
+texture = ExtResource("2_o5cgb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ht4o"]
 texture = ExtResource("2_o5cgb")
 
 [node name="alarm" type="Node2D"]
@@ -26,9 +26,9 @@ offset_top = 15.0
 offset_right = 105.0
 offset_bottom = 113.0
 mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_3ht4o")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ata0n")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_7dx85")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3ht4o")
 text = "Return
 to
 bed"

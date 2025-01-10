@@ -27,7 +27,7 @@ func load_data():
 		print("no data saved")
 
 
-var arc = 0
+var arc = -1
 var PlayerName = ""
 
 #PROLOGUE / ARC 0
@@ -37,5 +37,3 @@ var pcLoggedIn = false
 var phoneDiscovered = false
 var closetUnlocked = false
 var batteriesObtained = false
-
-

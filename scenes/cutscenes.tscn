@@ -1,12 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6xwoykjyt2r"]
+[gd_scene load_steps=5 format=3 uid="uid://c6xwoykjyt2r"]
 
-[ext_resource type="Script" path="res://scenes/game.gd" id="1_gnwka"]
+[ext_resource type="Script" path="res://scripts/cutscenes.gd" id="1_86j6c"]
 [ext_resource type="VideoStream" path="res://assets/Opening Cutscene.ogv" id="2_6mag2"]
+[ext_resource type="Texture2D" uid="uid://dfl1y5dgeo58t" path="res://assets/wakeupcutscenedraft.png" id="2_42ibm"]
 
 [sub_resource type="GDScript" id="GDScript_s5qay"]
 
 [node name="cutscenes" type="Node2D"]
-script = ExtResource("1_gnwka")
+script = ExtResource("1_86j6c")
+
+[node name="photoCutscene" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(432, 324.5)
+scale = Vector2(1.0725, 1.07833)
+texture = ExtResource("2_42ibm")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 offset_left = 2.0
@@ -20,7 +27,7 @@ script = SubResource("GDScript_s5qay")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 3.0
+wait_time = 2.1
 one_shot = true
 autostart = true
 
