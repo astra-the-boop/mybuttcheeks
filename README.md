@@ -1,5 +1,5 @@
 ## uhhhh something something update update
-kaboom kabab i made a itch.io page idk :sob:
+figured out github cli and logged in with my account again; also made an itch.io account btw :D
 -astra.celestine
 
 > Made with Godot v4.3.stable.release
