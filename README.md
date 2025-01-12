@@ -1,9 +1,10 @@
 ## uhhhh something something update update
 figured out github cli and logged in with my account again; also made an itch.io account btw :D
+apparently, the email linked to your account is the reason why it wasnt working... huh interesting...
 -astra.celestine
 
 > Made with Godot v4.3.stable.release
-### Latest Version: **Astropath 2.1.0** (12 Jan 2025)
+### Latest Version: **Astropath 2.1.0** (13 Jan 2025)
 
 ## Instructions:
 ### Recommended:
