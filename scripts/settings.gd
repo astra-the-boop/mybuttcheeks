@@ -8,6 +8,8 @@ func backPressed() -> void:
 
 func deleteSave() -> void:
 	DirAccess.remove_absolute("user://shitfucker.save")
+	saveDataStatus.text = "Save data deleted"
+	$deleteSave.disabled = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

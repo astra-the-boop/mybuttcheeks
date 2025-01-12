@@ -7,10 +7,12 @@ extends Control
 
 func play_pressed() -> void:
 	Global.load_data()
-	if !Global.arc == -1:
-		get_tree().change_scene_to_file("res://scenes/room.tscn")
-	else:
+	if Global.arc == -1:
 		get_tree().change_scene_to_file("res://scenes/cutscenes.tscn")
+	elif Global.arc == 0:
+		get_tree().change_scene_to_file("res://scenes/room.tscn")
+	elif Global.arc == 1:
+		get_tree().change_scene_to_file("res://scenes/train_station.tscn")
 	#in future, set change_scene_to_file based on locaiton based on time/story
 
 func options_pressed() -> void:

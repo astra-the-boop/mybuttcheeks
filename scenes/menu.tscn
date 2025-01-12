@@ -16,7 +16,7 @@ offset_right = -455.0
 offset_bottom = 643.0
 theme_override_constants/outline_size = -6
 theme_override_constants/line_spacing = -1
-text = "Version Astp-1.0.1
+text = "Version Astp-2.1.0
 https://github.com/astra-the-boop/mybuttcheeks
 Godot Engine v4.2.2"
 editable = false
@@ -52,3 +52,16 @@ offset_top = 462.0
 offset_right = 283.0
 offset_bottom = 509.0
 text = "CREDITS"
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 54.0
+offset_right = 605.0
+offset_bottom = 212.0
+theme_override_font_sizes/font_size = 45
+text = "If I could've changed...
+"
+editable = false
+context_menu_enabled = false
+wrap_mode = 1

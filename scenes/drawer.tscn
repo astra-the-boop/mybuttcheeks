@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://dlbx2n1fxrqvf" path="res://assets/[PLACEHOLDER] dialougeBox.jpeg" id="4_ngp1f"]
 [ext_resource type="Texture2D" uid="uid://cs52xr0wvyw6u" path="res://assets/phoneFront_temp.png" id="5_3qimn"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d80dy"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_64t6c"]
 texture = ExtResource("3_oqtg7")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_64t6c"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d80dy"]
 texture = ExtResource("3_oqtg7")
 
 [node name="drawer" type="Node2D"]
@@ -32,8 +32,8 @@ offset_top = 15.0
 offset_right = 105.0
 offset_bottom = 113.0
 mouse_default_cursor_shape = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_d80dy")
 theme_override_styles/hover = SubResource("StyleBoxTexture_64t6c")
+theme_override_styles/normal = SubResource("StyleBoxTexture_d80dy")
 text = "BA(llsa)CK"
 metadata/_edit_use_anchors_ = true
 

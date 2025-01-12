@@ -33,7 +33,7 @@ offset_left = 66.0
 offset_top = 32.0
 offset_right = 678.0
 offset_bottom = 153.0
-text = "You arrive at the metro, body trembling, your entire body feels heavy, adding onto the weight of your backpack. You collapse onto the brick floor, eyes holding back tears"
+text = "Arriving at the metro station, abnormally uncrowded; your entire body feels heavy, adding onto the weight of your backpack. You collapse onto the brick floor, eyes holding back tears"
 placeholder_text = "FUCK YOU, NEXT!"
 editable = false
 context_menu_enabled = false
@@ -44,3 +44,11 @@ drag_and_drop_selection_enabled = false
 virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
 wrap_mode = 1
+
+[node name="entertrain" type="Button" parent="."]
+visible = false
+offset_left = 394.0
+offset_top = 259.0
+offset_right = 629.0
+offset_bottom = 406.0
+text = "enter train"

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://mu75ioddpvdj"]
+
+[ext_resource type="Texture2D" uid="uid://dwiha478uqmya" path="res://assets/traininside.png" id="1_1wots"]
+
+[node name="Traininside" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(436, 328)
+scale = Vector2(1.085, 1.08667)
+texture = ExtResource("1_1wots")
