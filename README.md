@@ -1,9 +1,9 @@
-## WUAOHH IM BACKKKK
-yoooo okay, so sorry for the long wait xd, but IM BACK after a few months, HAPPY NEW YEARS!! i just had an idea breakthrough and just HAD to implement it, so might as well add a buncha shit
+## uhhhh something something update update
+kaboom kabab i made a itch.io page idk :sob:
 -astra.celestine
 
-> Made with Godot v4.2.2
-### Latest Version: **Astropath 2.0.0** (10 Jan 2025)
+> Made with Godot v4.3.stable.release
+### Latest Version: **Astropath 2.1.0** (12 Jan 2025)
 
 ## Instructions:
 ### Recommended:
