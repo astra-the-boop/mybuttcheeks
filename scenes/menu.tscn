@@ -18,7 +18,7 @@ theme_override_constants/outline_size = -6
 theme_override_constants/line_spacing = -1
 text = "Version Astp-2.1.0
 https://github.com/astra-the-boop/mybuttcheeks
-Godot Engine v4.2.2"
+Godot Engine v4.3.stable.official"
 editable = false
 
 [node name="play" type="Button" parent="."]
